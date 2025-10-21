@@ -5,7 +5,7 @@ This is a basic Vue.js project that displays the text "placemaker" on the screen
 
 ## Project Structure
 ```
-placemaker-vue
+halfbakery2
 ├── src
 │   ├── main.js
 │   ├── App.vue
@@ -23,7 +23,7 @@ placemaker-vue
 1. **Clone the repository:**
    ```bash
    git clone <repository-url>
-   cd placemaker-vue
+   cd halfbakery2
    ```
 
 2. **Install dependencies:**
