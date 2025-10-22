@@ -38,6 +38,11 @@ const routes = [
     component: () => import('../views/IdeaDetail.vue')
   },
   {
+    path: '/field/:slug',
+    name: 'FieldView',
+    component: () => import('../views/FieldView.vue')
+  },
+  {
     path: '/help',
     name: 'Help',
     component: () => import('../views/Help.vue')

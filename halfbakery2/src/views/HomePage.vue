@@ -60,15 +60,16 @@
     </div>
 
     <!-- FOOTER -->
-    <footer class="mt-10 border-t pt-4 text-sm">
+    <footer class="mt-10 pt-4 text-sm">
       <div class="flex flex-wrap gap-2 mb-2">
-        <span 
-          v-for="tag in categoryTags" 
-          :key="tag"
-          class="bg-gray-300 rounded px-2 py-1 text-xs"
+        <router-link 
+          v-for="field in fields" 
+          :key="field._id"
+          :to="`/field/${field.slug}`"
+          class="bg-gray-300 hover:bg-gray-400 rounded px-2 py-1 text-xs text-gray-800 hover:text-gray-900 no-underline"
         >
-          {{ tag }}
-        </span>
+          {{ field.name.toLowerCase() }}
+        </router-link>
       </div>
       <p>
         <router-link to="/" class="underline">back: main index</router-link> | 
@@ -147,31 +148,20 @@ export default {
           fields.map(async (field) => {
             const ideasResponse = await fetch(`${apiBase}/api/fields/${field._id}/recent-ideas`);
             const ideas = await ideasResponse.json();
-            console.log(`Raw ideas for ${field.name}:`, ideas);
             
             return {
               name: field.name,
-              ideas: ideas.map(idea => {
-                console.log(`Mapping idea: ${idea.title} -> ID: ${idea._id}`);
-                return {
-                  id: idea._id,
-                  title: idea.title,
-                  isUnread: this.isIdeaUnread(idea)
-                };
-              })
+              ideas: ideas.map(idea => ({
+                id: idea._id,
+                title: idea.title,
+                isUnread: this.isIdeaUnread(idea)
+              }))
             };
           })
         );
         
         this.categories = fieldsWithIdeas;
         this.fields = fields;
-        console.log('Loaded categories with ideas:', fieldsWithIdeas);
-        // Debug: Check the actual IDs being used
-        fieldsWithIdeas.forEach(category => {
-          category.ideas.forEach(idea => {
-            console.log(`Idea "${idea.title}" has ID: ${idea.id}`);
-          });
-        });
         this.loading = false;
       } catch (error) {
         console.error('Error loading data:', error);

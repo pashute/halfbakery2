@@ -61,6 +61,15 @@ This document outlines the core functional and design requirements for rebuildin
 | FR 6.0.3 | Each **Subcategory Page** must display a **complete list of all Ideas** within that subcategory, sorted according to the current Page Layout settings. | |
 | FR 6.0.4 | Ideas in subcategory lists must also follow the **read/unread bolding system** described in FR 5.0.5 and FR 5.0.6. | |
 
+### FR 6.1 - Field Navigation Footer
+| ID | Requirement | Notes |
+| :--- | :--- | :--- |
+| FR 6.1.1 | All pages must display a **permanent footer navigation** with clickable field links spanning the full width of the page. | Provides consistent site-wide navigation to main fields/categories. |
+| FR 6.1.2 | Footer field links must be implemented as **router-link components** navigating to `/field/:slug` routes. | Technical requirement: no static span elements, proper Vue router integration. |
+| FR 6.1.3 | Footer field links must maintain **hover effects** and **consistent styling** with the original site aesthetic. | Dark background with light text, subtle hover transitions. |
+| FR 6.1.4 | The footer navigation must be **dynamically generated** from the database field/category structure, not hardcoded. | Same requirement as FR 5.0.3 - no static category lists in frontend code. |
+| FR 6.1.5 | Footer navigation must be the **only field navigation element** - no duplicate navigation sections should exist on any page. | Ensures clean, consistent user experience without navigation confusion. |
+
 ### FR 7.0 - Page Layouts (The "Views" Feature)
 | ID | Requirement | Notes |
 | :--- | :--- | :--- |
