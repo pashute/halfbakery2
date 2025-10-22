@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Halfbakery — Interactive Prototype</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+  function switchTheme(theme) {
+    document.body.dataset.theme = theme;
+  }
+
+  function filterIdeas() {
+    const term = document.getElementById("searchInput").value.toLowerCase();
+    const sections = document.querySelectorAll(".category");
+    sections.forEach(sec => {
+      const title = sec.querySelector("h2").textContent.toLowerCase();
+      const items = sec.querySelectorAll("li");
+      let match = false;
+      items.forEach(li => {
+        const txt = li.textContent.toLowerCase();
+        if (txt.includes(term) || title.includes(term)) {
+          li.style.display = "list-item";
+          match = true;
+        } else {
+          li.style.display = "none";
+        }
+      });
+      sec.style.display = match || title.includes(term) ? "block" : "none";
+    });
+  }
+</script>
+<style>
+  /* === THEMES === */
+  [data-theme='classic'] {
+    background-color: #f3f2e9;
+    color: #222;
+    font-family: "Verdana", sans-serif;
+  }
+  [data-theme='classic'] h2 {
+    background-color: #d4d3b8;
+    color: #000;
+    padding: 2px 8px;
+  }
+
+  [data-theme='dark'] {
+    background-color: #0f172a;
+    color: #f1f5f9;
+    font-family: "Inter", sans-serif;
+  }
+  [data-theme='dark'] h2 {
+    background-color: #1e293b;
+    color: #38bdf8;
+    border-left: 3px solid #38bdf8;
+  }
+
+  [data-theme='clean'] {
+    background-color: #ffffff;
+    color: #111;
+    font-family: "Inter", sans-serif;
+  }
+  [data-theme='clean'] h2 {
+    background-color: #f1f5f9;
+    color: #111;
+    border-left: 3px solid #475569;
+  }
+
+  [data-theme='colorful'] {
+    background: linear-gradient(180deg, #fdfbfb 0%, #ebedee 100%);
+    color: #1e293b;
+    font-family: "Poppins", sans-serif;
+  }
+  [data-theme='colorful'] h2 {
+    background: linear-gradient(90deg, #7dd3fc, #a78bfa);
+    color: white;
+    border-radius: 4px;
+    padding: 3px 8px;
+  }
+
+  /* Common Layout */
+  .category-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1.5rem;
+  }
+  li::before {
+    content: "☞ ";
+  }
+  li {
+    margin-left: 8px;
+  }
+</style>
+</head>
+<body data-theme="classic" class="p-6 transition-colors duration-500">
+
+<!-- HEADER -->
+<header class="mb-6 flex flex-col md:flex-row justify-between items-start md:items-center">
+  <div>
+    <h1 class="text-2xl font-bold">halfbakery</h1>
+    <p class="italic text-sm">The halfway house for at-risk ideas</p>
+  </div>
+  <div class="mt-3 md:mt-0 space-x-2">
+    <button onclick="switchTheme('classic')" class="px-3 py-1 rounded bg-gray-300 hover:bg-gray-400">🕰️ Classic</button>
+    <button onclick="switchTheme('dark')" class="px-3 py-1 rounded bg-gray-700 text-white hover:bg-gray-600">🌙 Dark</button>
+    <button onclick="switchTheme('clean')" class="px-3 py-1 rounded bg-gray-200 hover:bg-gray-300">🌿 Clean</button>
+    <button onclick="switchTheme('colorful')" class="px-3 py-1 rounded bg-gradient-to-r from-sky-400 to-violet-500 text-white hover:opacity-90">🎨 Colorful</button>
+  </div>
+</header>
+
+<!-- SEARCH -->
+<div class="mb-6 flex flex-col sm:flex-row items-center gap-3">
+  <input id="searchInput" onkeyup="filterIdeas()" placeholder="🔍 Search ideas or categories..."
+         class="border border-gray-400 rounded px-3 py-2 w-full sm:w-1/2">
+  <p class="text-sm text-gray-500 italic">Type to filter instantly</p>
+</div>
+
+<!-- INTRO -->
+<p class="mb-6 max-w-3xl">Ideas are divided into major categories. Ideas in <b>bold</b> were created this week.</p>
+
+<!-- MAIN GRID -->
+<div class="category-grid">
+
+  <div class="category">
+    <h2>Business</h2>
+    <ul>
+      <li>Radio/television numbering scheme with readings in style of Countdown</li>
+      <li>Gradually expiring vouchers</li>
+    </ul>
+  </div>
+
+  <div class="category">
+    <h2>Computer</h2>
+    <ul>
+      <li>Luneburg microlens array</li>
+      <li>freeSearch</li>
+      <li>Shine phone</li>
+    </ul>
+  </div>
+
+  <div class="category">
+    <h2>Fashion</h2>
+    <ul>
+      <li>villain barber kidnapping</li>
+      <li>Shoulder Ride Steering Hat</li>
+    </ul>
+  </div>
+
+  <div class="category">
+    <h2>Food</h2>
+    <ul><li>Latte Foam Art Pendulum</li></ul>
+  </div>
+
+  <div class="category">
+    <h2>Home</h2>
+    <ul><li>Pyrotronum</li></ul>
+  </div>
+
+  <div class="category">
+    <h2>Other</h2>
+    <ul>
+      <li>Animal Commuter Trains</li>
+      <li>Doggy Disneyland</li>
+    </ul>
+  </div>
+
+  <div class="category">
+    <h2>Product</h2>
+    <ul>
+      <li>Buzz Bomb Pipe Organ</li>
+      <li>Eyelights + retroreflective paint = efficiency</li>
+      <li>iPhone Book Disguise</li>
+    </ul>
+  </div>
+
+  <div class="category">
+    <h2>Public</h2>
+    <ul>
+      <li>And This Year's Massive Hoax Was...</li>
+      <li>Standardized Homeless Fold Up Mobile Houses</li>
+      <li>Big Brother Is Watching You Stick On Security Camera Poster</li>
+    </ul>
+  </div>
+
+  <div class="category">
+    <h2>Science</h2>
+    <ul>
+      <li>Nuclear Waste Disposal Thought Experiment</li>
+      <li>1G Space Station</li>
+      <li>Male / Female Explosion Reaction Study</li>
+    </ul>
+  </div>
+
+  <div class="category">
+    <h2>Sport</h2>
+    <ul>
+      <li>Million Dollar Per Round Mike Tyson Boxing Match Charity Event</li>
+      <li>Ballistic Curling</li>
+      <li>Coriolis Curling</li>
+    </ul>
+  </div>
+
+  <div class="category">
+    <h2>Vehicle</h2>
+    <ul>
+      <li>Baseline Sobriety Test</li>
+      <li>EV Battery Heater</li>
+      <li>False North</li>
+    </ul>
+  </div>
+
+</div>
+
+<!-- FOOTER -->
+<footer class="mt-10 border-t pt-4 text-sm">
+  <div class="flex flex-wrap gap-2 mb-2">
+    <span class="bg-gray-300 rounded px-2 py-1 text-xs">business</span>
+    <span class="bg-gray-300 rounded px-2 py-1 text-xs">computer</span>
+    <span class="bg-gray-300 rounded px-2 py-1 text-xs">culture</span>
+    <span class="bg-gray-300 rounded px-2 py-1 text-xs">fashion</span>
+    <span class="bg-gray-300 rounded px-2 py-1 text-xs">food</span>
+    <span class="bg-gray-300 rounded px-2 py-1 text-xs">halfbakery</span>
+    <span class="bg-gray-300 rounded px-2 py-1 text-xs">home</span>
+    <span class="bg-gray-300 rounded px-2 py-1 text-xs">other</span>
+    <span class="bg-gray-300 rounded px-2 py-1 text-xs">product</span>
+    <span class="bg-gray-300 rounded px-2 py-1 text-xs">public</span>
+    <span class="bg-gray-300 rounded px-2 py-1 text-xs">science</span>
+    <span class="bg-gray-300 rounded px-2 py-1 text-xs">sport</span>
+    <span class="bg-gray-300 rounded px-2 py-1 text-xs">vehicle</span>
+  </div>
+  <p><a href="#" class="underline">back: main index</a> | <a href="#" class="underline">[more]</a></p>
+</footer>
+
+</body>
+</html>

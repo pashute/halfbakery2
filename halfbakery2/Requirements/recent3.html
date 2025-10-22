@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>halfbakery - The halfway house for at-risk ideas</title>
+<style>
+  body {
+    background-color: #f3f2e9;
+    color: #222;
+    font-family: "Verdana", sans-serif;
+    font-size: 13px;
+    line-height: 1.5;
+    margin: 20px;
+  }
+  a {
+    color: #000;
+    text-decoration: none;
+  }
+  a:hover {
+    text-decoration: underline;
+  }
+  h1 {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 5px;
+  }
+  h2 {
+    background-color: #d4d3b8;
+    display: inline-block;
+    padding: 2px 8px;
+    font-size: 13px;
+    margin-top: 10px;
+  }
+  .section {
+    margin-bottom: 15px;
+  }
+  .category-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 15px;
+  }
+  ul {
+    list-style-type: none;
+    padding-left: 10px;
+  }
+  li::before {
+    content: "☞ ";
+  }
+  .sidebar {
+    float: left;
+    width: 180px;
+    margin-right: 20px;
+  }
+  .content {
+    margin-left: 200px;
+  }
+  .footer {
+    clear: both;
+    border-top: 1px solid #999;
+    padding-top: 10px;
+    margin-top: 30px;
+  }
+  .tagbar {
+    margin-top: 10px;
+    background: #d4d3b8;
+    padding: 4px;
+    font-size: 12px;
+  }
+  .tagbar span {
+    margin-right: 8px;
+  }
+</style>
+</head>
+<body>
+
+<div class="sidebar">
+  <h1>halfbakery</h1>
+  <p><i>The halfway house for at-risk ideas</i></p>
+
+  <p><b>idea:</b> add, search, overview, recent, by name, random</p>
+  <p><b>meta:</b> news, help, about, links, report a problem</p>
+
+  <p><b>account:</b><br>
+  browse anonymously, or get an account and write.</p>
+
+  <form>
+    <label>user:</label><br>
+    <input type="text" style="width:100%;"><br>
+    <label>pass:</label><br>
+    <input type="password" style="width:100%;"><br>
+    <button type="submit">login</button>
+  </form>
+  <p><a href="#">register</a></p>
+</div>
+
+<div class="content">
+  <p>Ideas are divided into major categories. Ideas in <b>bold</b> were created this week.</p>
+  
+  <div class="category-list">
+    <div class="section">
+      <h2>Business</h2>
+      <ul>
+        <li>Radio/television numbering scheme with readings in style of Countdown</li>
+        <li>Gradually expiring vouchers</li>
+      </ul>
+    </div>
+    <div class="section">
+      <h2>Computer</h2>
+      <ul>
+        <li>Luneburg microlens array</li>
+        <li>freeSearch</li>
+        <li>Shine phone</li>
+      </ul>
+    </div>
+    <div class="section">
+      <h2>Fashion</h2>
+      <ul>
+        <li>villain barber kidnapping</li>
+        <li>Shoulder Ride Steering Hat</li>
+      </ul>
+    </div>
+    <div class="section">
+      <h2>Food</h2>
+      <ul><li>Latte Foam Art Pendulum</li></ul>
+    </div>
+    <div class="section">
+      <h2>Home</h2>
+      <ul><li>Pyrotronum</li></ul>
+    </div>
+    <div class="section">
+      <h2>Other</h2>
+      <ul>
+        <li>Animal Commuter Trains</li>
+        <li>Doggy Disneyland</li>
+      </ul>
+    </div>
+    <div class="section">
+      <h2>Product</h2>
+      <ul>
+        <li>Buzz Bomb Pipe Organ</li>
+        <li>Eyelights + retroreflective paint = efficiency</li>
+        <li>iPhone Book Disguise</li>
+      </ul>
+    </div>
+    <div class="section">
+      <h2>Public</h2>
+      <ul>
+        <li>And This Year's Massive Hoax Was...</li>
+        <li>Standardized Homeless Fold Up Mobile Houses</li>
+        <li>Big Brother Is Watching You Stick On Security Camera Poster</li>
+      </ul>
+    </div>
+    <div class="section">
+      <h2>Science</h2>
+      <ul>
+        <li>Nuclear Waste Disposal Thought Experiment</li>
+        <li>1G Space Station</li>
+        <li>Male / Female Explosion Reaction Study</li>
+      </ul>
+    </div>
+    <div class="section">
+      <h2>Sport</h2>
+      <ul>
+        <li>Million Dollar Per Round Mike Tyson Boxing Match Charity Event</li>
+        <li>Ballistic Curling</li>
+        <li>Coriolis Curling</li>
+      </ul>
+    </div>
+    <div class="section">
+      <h2>Vehicle</h2>
+      <ul>
+        <li>Baseline Sobriety Test</li>
+        <li>EV Battery Heater</li>
+        <li>False North</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="tagbar">
+    <span>business</span><span>computer</span><span>culture</span>
+    <span>fashion</span><span>food</span><span>halfbakery</span>
+    <span>home</span><span>other</span><span>product</span>
+    <span>public</span><span>science</span><span>sport</span>
+    <span>vehicle</span>
+  </div>
+
+  <div class="footer">
+    <a href="#">back: main index</a> | <a href="#">[more]</a>
+  </div>
+</div>
+
+</body>
+</html>

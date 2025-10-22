@@ -1,0 +1,240 @@
+{
+  "fields": [
+    {
+      "id": "business",
+      "name": "Business",
+      "slug": "business",
+      "description": "Business ideas and entrepreneurial concepts",
+      "order": 1,
+      "isActive": true,
+      "categories": [
+        {
+          "id": "marketing",
+          "name": "Marketing",
+          "slug": "marketing",
+          "description": "Marketing and advertising ideas"
+        },
+        {
+          "id": "finance",
+          "name": "Finance",
+          "slug": "finance", 
+          "description": "Financial services and systems"
+        }
+      ]
+    },
+    {
+      "id": "computer",
+      "name": "Computer",
+      "slug": "computer",
+      "description": "Technology and computing innovations",
+      "order": 2,
+      "isActive": true,
+      "categories": [
+        {
+          "id": "software",
+          "name": "Software",
+          "slug": "software",
+          "description": "Software applications and systems"
+        },
+        {
+          "id": "hardware",
+          "name": "Hardware", 
+          "slug": "hardware",
+          "description": "Computer hardware and devices"
+        }
+      ]
+    },
+    {
+      "id": "fashion",
+      "name": "Fashion",
+      "slug": "fashion",
+      "description": "Clothing and fashion innovations",
+      "order": 3,
+      "isActive": true,
+      "categories": [
+        {
+          "id": "clothing",
+          "name": "Clothing",
+          "slug": "clothing",
+          "description": "Clothing designs and innovations"
+        },
+        {
+          "id": "accessories",
+          "name": "Accessories",
+          "slug": "accessories",
+          "description": "Fashion accessories and jewelry"
+        }
+      ]
+    },
+    {
+      "id": "food",
+      "name": "Food",
+      "slug": "food",
+      "description": "Food and cooking innovations",
+      "order": 4,
+      "isActive": true,
+      "categories": [
+        {
+          "id": "cooking",
+          "name": "Cooking",
+          "slug": "cooking",
+          "description": "Cooking techniques and tools"
+        },
+        {
+          "id": "drinks",
+          "name": "Drinks",
+          "slug": "drinks",
+          "description": "Beverages and drink innovations"
+        }
+      ]
+    },
+    {
+      "id": "home",
+      "name": "Home",
+      "slug": "home",
+      "description": "Home and domestic innovations",
+      "order": 5,
+      "isActive": true,
+      "categories": [
+        {
+          "id": "furniture",
+          "name": "Furniture",
+          "slug": "furniture",
+          "description": "Furniture design and innovations"
+        },
+        {
+          "id": "appliances",
+          "name": "Appliances",
+          "slug": "appliances",
+          "description": "Home appliances and tools"
+        }
+      ]
+    },
+    {
+      "id": "other",
+      "name": "Other",
+      "slug": "other",
+      "description": "Miscellaneous and uncategorized ideas",
+      "order": 6,
+      "isActive": true,
+      "categories": [
+        {
+          "id": "general",
+          "name": "General",
+          "slug": "general",
+          "description": "General uncategorized ideas"
+        }
+      ]
+    },
+    {
+      "id": "product",
+      "name": "Product",
+      "slug": "product",
+      "description": "Product design and development",
+      "order": 7,
+      "isActive": true,
+      "categories": [
+        {
+          "id": "design",
+          "name": "Design",
+          "slug": "design",
+          "description": "Product design concepts"
+        },
+        {
+          "id": "manufacturing",
+          "name": "Manufacturing",
+          "slug": "manufacturing",
+          "description": "Manufacturing processes and systems"
+        }
+      ]
+    },
+    {
+      "id": "public",
+      "name": "Public",
+      "slug": "public",
+      "description": "Public services and civic innovations",
+      "order": 8,
+      "isActive": true,
+      "categories": [
+        {
+          "id": "transportation",
+          "name": "Transportation",
+          "slug": "transportation",
+          "description": "Public transportation systems"
+        },
+        {
+          "id": "civic",
+          "name": "Civic",
+          "slug": "civic",
+          "description": "Civic and government innovations"
+        }
+      ]
+    },
+    {
+      "id": "science",
+      "name": "Science",
+      "slug": "science",
+      "description": "Scientific research and innovations",
+      "order": 9,
+      "isActive": true,
+      "categories": [
+        {
+          "id": "physics",
+          "name": "Physics",
+          "slug": "physics",
+          "description": "Physics and physical sciences"
+        },
+        {
+          "id": "biology",
+          "name": "Biology",
+          "slug": "biology",
+          "description": "Biological sciences and medicine"
+        }
+      ]
+    },
+    {
+      "id": "sport",
+      "name": "Sport",
+      "slug": "sport",
+      "description": "Sports and recreational activities",
+      "order": 10,
+      "isActive": true,
+      "categories": [
+        {
+          "id": "equipment",
+          "name": "Equipment",
+          "slug": "equipment",
+          "description": "Sports equipment and gear"
+        },
+        {
+          "id": "games",
+          "name": "Games",
+          "slug": "games",
+          "description": "Sports and game innovations"
+        }
+      ]
+    },
+    {
+      "id": "vehicle",
+      "name": "Vehicle",
+      "slug": "vehicle",
+      "description": "Vehicle and transportation innovations",
+      "order": 11,
+      "isActive": true,
+      "categories": [
+        {
+          "id": "automotive",
+          "name": "Automotive",
+          "slug": "automotive",
+          "description": "Cars and automotive technology"
+        },
+        {
+          "id": "alternative",
+          "name": "Alternative",
+          "slug": "alternative",
+          "description": "Alternative transportation methods"
+        }
+      ]
+    }
+  ]
+}

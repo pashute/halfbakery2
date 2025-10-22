@@ -1,0 +1,12 @@
+nohup: ignoring input
+
+> halfbakery2@1.0.0 dev
+> vite --host 0.0.0.0
+
+[33mThe CJS build of Vite's Node API is deprecated. See https://vite.dev/guide/troubleshooting.html#vite-cjs-node-api-deprecated for more details.[39m
+
+  VITE v5.4.21  ready in 271 ms
+
+  ➜  Local:   http://localhost:3000/
+  ➜  Network: http://10.0.14.86:3000/
+3:07:56 AM [vite] page re3:07:56 AM [vite3:09:23 AM [vite] page re3:09:23 AM [vite3:15:45 AM [vite] page re3:15:45 AM [vite3:16:17 AM [vite] page re3:16:17 AM [vite] page reload index.html
