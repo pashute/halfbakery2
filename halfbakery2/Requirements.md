@@ -227,10 +227,13 @@ The help section must define unique terms and explain core functionality.
 ### HD 9.1 - Halfbakery Jargon Glossary (Updated)
 | ID | Term | Definition |
 | :--- | :--- | :--- |
-| GL 9.1.1 | **Half-Baked** | A clever concept that needs significant further refinement, feasibility testing, or major development before it can be considered a full product or concept. |
+| GL 9.1.1 | **Halfbaked** | A clever concept that needs significant further refinement, feasibility testing, or major development before it can be considered a full product or concept. |
 | GL 9.1.2 | **Idea** | The primary post (usually an invention) submitted by a user. |
 | GL 9.1.3 | **Annotation** | A user-submitted comment or critique on an Idea. Annotations can be voted on (Agree/Disagree). |
 | GL 9.1.4 | **Page Layouts** | User-defined, customized ways to display and sort Idea listings on the main page (formerly known as Views). |
 | GL 9.1.5 | **Pastry / Fishbone** | The units of rating. Pastry = +1 (Upvote). Fishbone = -1 (Downvote). |
 | GL 9.1.6 | **Net Score** | The cumulative rating of an Idea ($\text{Pastries} - \text{Fishbones}$). |
 | GL 9.1.7 | **MFD** | **Marked For Deletion.** A status that the users mark by flagging. The website shows this publicly and the admins has a way of seening flagged ideas with their vote and flag rating. Views/Admin/Flagged |
+| GL 9.1.8 | **WIBNI** | **Wouldn't it be Nice if.** A bad idea, that cannot be implemented without magical dust but can be used to demonstrate bad science. Views/Admin/Wibni |
+| GL 9.1.9 | **Baked** | **Already exists.** Prior art. Not your idea. Views/Admin/Baked |
+| GL 9.1.10 | **Duped** | **Same as somebaker's idea** A bad idea. Prior art. Not your idea. Views/Admin/Duped |
